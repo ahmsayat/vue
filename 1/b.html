@@ -6,10 +6,19 @@
 <body>
   
 <div id="app">
-  <div v-for="tick in ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T']">
+  <div v-for="tick in ticks">
   {{ tick }}
   </div>
 </div>
+  
+ <script>  
+var app = new Vue({
+  el: '#app',
+  data: {
+    ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
+  }
+})
+</script>  
   
 </body>  
 </html>
