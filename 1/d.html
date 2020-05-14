@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script tpye="text/javascript">
+function tv(tick)
+{
+  new TradingView.widget(
+        {
+          "width": 300,
+          "height": 200,
+          "symbol": tick,
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": tick
+        }
+      );
+}
+</script>
+</head>
+<body>
+  <div id="app" style="display:inline-block;">
+  
+  <!-- var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T']; -->
+
+  <div class='tradingview-widget-container'><div id="AAL"><script tpye="text/javascript">tv("AAL");</script></div>
+  <div class='tradingview-widget-container'><div id="DAL"><script tpye="text/javascript">tv("DAL");</script></div>
+  <div class='tradingview-widget-container'><div id="UAL"><script tpye="text/javascript">tv("UAL");</script></div>
+
+  </div>
+
+  </div>
+</body>
+</html>
