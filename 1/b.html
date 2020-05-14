@@ -15,7 +15,7 @@
   <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   
-<div :data-id="t"></div></div>
+<div :id="t"></div></div>
 <!-- TradingView Widget END -->
   </div>
 </div>
@@ -25,13 +25,17 @@ var app = new Vue({
   el: '#app',
   data: { ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'] },
   mounted: function() {
-      this.id = this.$el.getAttribute('data-id');
+    
+    for t in ticks:
+      this.id = this.$el.getAttribute('id');
       alert(this.id);
+          alert(t);
+
       new TradingView.widget(
         {
           "width": 300,
           "height": 200,
-          "symbol": this.id,
+          "symbol": t,
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -40,7 +44,7 @@ var app = new Vue({
           "toolbar_bg": "#f1f3f6",
           "enable_publishing": false,
           "allow_symbol_change": true,
-          "container_id": "tradingview_f382c"
+          "container_id": t
         }
       );
     }
