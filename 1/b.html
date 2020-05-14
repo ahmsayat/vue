@@ -7,14 +7,11 @@
   
 <div id="app">
   <div style="display:inline-block;" v-for="t in ticks">
-  <iframe src=”http://www.tradingview.com/embed/{{ t }}” width=”640″ height=”400″ frameborder=”0″></iframe>
-
-
-    
-   </div>
+    <iframe src="https://www.tradingview.com/chart/?symbol={{ t }}" width="640" height="400" frameborder="0"></iframe>
+  </div>
 </div>
   
- <script>  
+<script>  
 var app = new Vue({ 
   el: '#app',
   data: { ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'] }
