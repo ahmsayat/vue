@@ -15,7 +15,7 @@
   <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   
-<div :id="t" v-on:load="say(t)"></div></div>
+<div :data-id="t"></div></div>
 <!-- TradingView Widget END -->
   </div>
 </div>
@@ -24,14 +24,14 @@
 var app = new Vue({ 
   el: '#app',
   data: { ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'] },
-  methods: {
-    say: function (msg) {
-      alert(msg)
+  mounted: function() {
+      this.id = this.$el.getAttribute('data-id');
+      alert(this.id)
       new TradingView.widget(
         {
           "width": 300,
           "height": 200,
-          "symbol": t,
+          "symbol": this.id,
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
