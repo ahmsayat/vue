@@ -10,8 +10,8 @@
   alert(t);
   new TradingView.widget(
     {
-      "width": 400,
-      "height": 300,
+      "width": 300,
+      "height": 200,
       "symbol": t,
       "interval": "D",
       "timezone": "Etc/UTC",
@@ -36,7 +36,7 @@
   <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   
-<div id="{{t}}"></div><script type="text/javascript">my_func({{t}})</script></div>
+<div id="{{t}}" onload="my_func({{t}})"></div></div>
 <!-- TradingView Widget END -->
   </div>
 </div>
