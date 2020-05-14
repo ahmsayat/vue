@@ -27,8 +27,8 @@ function tv(tick)
 {
   new TradingView.widget(
         {
-          "width": 250,
-          "height": 100,
+          "width": 330,
+          "height": 200,
           "symbol": tick,
           "interval": "1",
           "timezone": "America/New_York",
@@ -48,7 +48,7 @@ function tv(tick)
   <div id="app" >
   
   <!-- var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T']; -->
-
+<center>
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="AAL"><script tpye="text/javascript">tv("AAL");</script></div></div>
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="DAL"><script tpye="text/javascript">tv("DAL");</script></div></div>
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="UAL"><script tpye="text/javascript">tv("UAL");</script></div></div>
@@ -58,9 +58,8 @@ function tv(tick)
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="GPS"><script tpye="text/javascript">tv("GPS");</script></div></div>
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="F"><script tpye="text/javascript">tv("F");</script></div></div>
   <div style="display:inline-block;" class='tradingview-widget-container'><div id="M"><script tpye="text/javascript">tv("M");</script></div></div>
-
+</center>
   
-
-  </div>
+ </div>
 </body>
 </html>
