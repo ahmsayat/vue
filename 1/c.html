@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+<script>
+$(document).ready(function(){
+var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
+
+$.each(ticks, function(index,title){
+		$('#app').append("<div onload="x(this)" class='tradingview-widget-container'><div id=" + title + "></div></div>")			
+		}
+	);
+  
+  
+   
+  
+  
+  $("div").click(function(){
+    $(this).hide();
+  });
+  
+  
+});
+
+function x(t) {
+      alert(t);
+      new TradingView.widget(
+        {
+          "width": 300,
+          "height": 200,
+          "symbol": t,
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": t
+        }
+      );
+    }
+});  
+
+</script>
+</head>
+<body>
+  <div id="app" style="display:inline-block;"></div>
+</body>
+</html>
