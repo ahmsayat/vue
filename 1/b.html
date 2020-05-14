@@ -25,11 +25,8 @@ var app = new Vue({
   el: '#app',
   data: { ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'] },
   mounted: function() {
-    
-    for t in ticks:
-      this.id = this.$el.getAttribute('id');
-      alert(this.id);
-          alert(t);
+    data.ticks.forEach(function(item){
+    alert(item);
 
       new TradingView.widget(
         {
@@ -45,9 +42,12 @@ var app = new Vue({
           "enable_publishing": false,
           "allow_symbol_change": true,
           "container_id": t
-        }
-      );
-    }
+        });
+     
+  });
+  
+  } 
+    
 });  
 </script>  
   
