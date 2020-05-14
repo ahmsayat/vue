@@ -6,8 +6,8 @@
 <body>
   
 <div id="app">
-  <div v-for="t in ticks">
-    <iframe style="display:inline-block;" src="https://www.tradingview.com/chart/?symbol={{ t }}"></iframe>        
+  <div style="display:inline-block;" v-for="t in ticks">
+    <iframe src="https://www.tradingview.com/chart/?symbol={{ t }}"></iframe>        
   </div>
 </div>
   
