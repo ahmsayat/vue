@@ -4,40 +4,38 @@
   
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script type="text/javascript">
+ function my_func(t){
+  new TradingView.widget(
+    {
+      "width": 400,
+      "height": 300,
+      "symbol": t,
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "light",
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "container_id": "tradingview_f382c"
+    }
+  );
+ }
+</script>  
 </head>
 <body>
   
-   
+
 <div id="app">
   <div style="display:inline-block;" v-for="t in ticks">
     
   <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-  
-  <div id="tradingview_f382c"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-    "width": 400,
-    "height": 300,
-    "symbol": "AAL",
-    "interval": "D",
-    "timezone": "Etc/UTC",
-    "theme": "light",
-    "style": "1",
-    "locale": "en",
-    "toolbar_bg": "#f1f3f6",
-    "enable_publishing": false,
-    "allow_symbol_change": true,
-    "container_id": "tradingview_f382c"
-  }
-  );
-  </script>
-</div>
+<div id="{{t}}"></div><script type="text/javascript">my_func({{t}})</script></div>
 <!-- TradingView Widget END -->
-
-    <iframe document.domain="www.tradingview.com"  src="https://www.tradingview.com/chart/?symbol=AAL" width="300" height="200" frameborder="0" sandbox="allow-same-origin" ></iframe>
   </div>
 </div>
   
@@ -45,7 +43,7 @@
 var app = new Vue({ 
   el: '#app',
   data: { ticks: ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'] }
-});
+});  
 </script>  
   
 </body>  
