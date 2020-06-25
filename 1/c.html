@@ -13,37 +13,17 @@ $.each(ticks, function(index,title){
 		}
 	);
   
-  
+  });
    
   
   
-  $("div").click(function(){
+$("div").click(function(){
     $(this).hide();
   });
-  
-  
-});
 
 function x(t) {
       alert(t);
-      new TradingView.widget(
-        {
-          "width": 300,
-          "height": 200,
-          "symbol": t,
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "light",
-          "style": "1",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "enable_publishing": false,
-          "allow_symbol_change": true,
-          "container_id": t
-        }
-      );
-    }
-});  
+    } 
 
 </script>
 </head>
