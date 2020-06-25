@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+ {
+  "symbol": "FX:EURUSD",
+  "width": 350,
+  "height": 220,
+  "locale": "en",
+  "dateRange": "12m",
+  "colorTheme": "light",
+  "trendLineColor": "#37a6ef",
+  "underLineColor": "#E3F2FD",
+  "isTransparent": false,
+  "autosize": false,
+  "largeChartUrl": ""
+}
+</script>
+  
+<script tpye="text/javascript">
+function mini(tick)
+{}
+
+  
+function tv(tick)
+{
+  new TradingView.widget(
+        {
+          "width": 280,
+          "height": 160,
+          "symbol": tick,
+          "interval": "1",
+          "timezone": "America/New_York",
+          "theme": "light",
+          "style": "3",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": false,
+          "container_id": tick
+        }
+      );
+}
+</script>
+</head>
+<body>
+  <div id="app" >
+  
+  <!-- var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T']; -->
+<center>
+<img style="-webkit-user-select:none; display:block; margin:auto; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);" src="https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=AAL&amp;time=1dy&amp;freq=5mi&amp;size=1">
+<img style="-webkit-user-select:none; display:block; margin:auto; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);" src="https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=5mi&amp;size=1">
+</center>
+  
+ </div>
+</body>
+</html>
