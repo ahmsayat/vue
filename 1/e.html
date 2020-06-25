@@ -7,10 +7,10 @@
 	
 <script tpye="text/javascript">
 $(document).ready(function(){ 
-var html = '<div style="display:\'inline-block\'"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>\{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"\}<\/script><\/div>';
+var html = '<div style="display:'inline-block'"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>\{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"\}<\/script><\/div>';
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 $.each(ticks, function(index,title){	
-$('#app').append("<img style="display:\'inline-block\'" src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
+$('#app').append("<img style="display:'inline-block'" src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
 $('#app').append(html.replaceAll("UAL", title));
 }
     );
