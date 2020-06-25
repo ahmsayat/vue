@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="30" />
+<meta http-equiv="refresh" content="10" />
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
@@ -9,8 +9,9 @@
 $(document).ready(function(){ 
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 $.each(ticks, function(index,title){	
-	$('#app').append("<img src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
-	$('#app').append('<div class="tradingview-widget-container"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>');
+	//$('#app').append("<img src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
+	var str = '<div class="tradingview-widget-container"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>';
+	$('#app').append(str.replaceAll("UAL", title));
 }
     );
 });
@@ -19,9 +20,9 @@ $.each(ticks, function(index,title){
 </head>
 <body id="app">
 	
-<div class="tradingview-widget-container"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>
+<div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "UAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>
 <div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "AAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>
-<div class="tradingview-widget-container"><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "DAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>
+<div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{ "symbol": "DAL", "width":150, "colorTheme": "dark", "isTransparent": false, "locale": "en"}</script></div>
 
 </body>
 </html>
