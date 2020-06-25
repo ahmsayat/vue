@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="600" />
+<meta http-equiv="refresh" content="60" />
 
 <style>
 /* Container holding the image and the text */
@@ -24,11 +24,11 @@
 <script tpye="text/javascript">
 
 $(document).ready(function(){ 
-var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
+var ticks = ['BA', 'AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'JWN', 'M', 'F', 'GE', 'GM', 'MITT', 'IVR', 'REML', 'SPG', 'BAC', 'T', 'GCI', 'FENY'];
 var html = '<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>\{ "symbol": "UAL", "width":150, "colorTheme": "light", "isTransparent": false, "locale": "en"\}<\/script>';
 
 $.each(ticks, function(index,title){
-	var graph = "<span class='container'><img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' /><div class='centered'>UAL</div></span>";
+	var graph = "<img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' />";
 	$('#app').append( graph.replaceAll("UAL", title) );
 	//$('#app').append(html.replaceAll("UAL", title));
 	}
