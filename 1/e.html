@@ -3,16 +3,12 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script tpye="text/javascript">
-$(document).ready(function(){
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
-
 $.each(ticks, function(index,title){
-		$('#app').append("<div onload='x()' class='tradingview-widget-container'><div id=" + title + ">Hi</div></div>");			
+		$('#app').append('<img src="https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=' + title + '&amp;time=1dy&amp;freq=5mi&amp;size=1" />' );
 		}
 	);
-  
-  });
-   
+    
 $("div").click(function(){
     $(this).hide();
   });
@@ -24,13 +20,5 @@ function x() {
 </script>
 </head>
 <body id="app">
-
-  <!-- var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T']; -->
-<center>
-<img style="-webkit-user-select:none; display:block; margin:auto; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);" src="https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=AAL&amp;time=1dy&amp;freq=5mi&amp;size=1">
-<img style="-webkit-user-select:none; display:block; margin:auto; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);" src="https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=5mi&amp;size=1">
-</center>
-  
- </div>
 </body>
 </html>
