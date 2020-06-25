@@ -11,13 +11,11 @@ var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'G
 var html = '<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>\{ "symbol": "UAL", "width":150, "colorTheme": "light", "isTransparent": false, "locale": "en"\}<\/script>';
 
 $.each(ticks, function(index,title){
-	var graph = "<img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' />";
-	$('#app').append( (html+graph).replaceAll("UAL", title) );
+	var graph = "UAL<img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' />";
+	$('#app').append( graph.replaceAll("UAL", title) );
 	//$('#app').append(html.replaceAll("UAL", title));
-
 	}
     );
-	
 });
 </script>
 
