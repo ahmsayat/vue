@@ -9,7 +9,7 @@ $(document).ready(function(){
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 $.each(ticks, function(index,title){	
 	$('#app').append("<img src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
-	$('#app').append("<div class='tradingview-widget-container'>" + tv(title) + "</script></div>");
+	$('#app').append("<div class='tradingview-widget-container'>" + tv(title) + "</div>");
 	}
     );
 });
@@ -18,7 +18,7 @@ $.each(ticks, function(index,title){
 <script tpye="text/javascript">
 function tv(ticker)
 	{
-		return "{ 'symbol': " + ticker + ", 'width':150, 'colorTheme': 'dark', 'isTransparent': false, 'locale': 'en'}";
+		return "<script>{ 'symbol': " + ticker + ", 'width':150, 'colorTheme': 'dark', 'isTransparent': false, 'locale': 'en'}</script>";
 	}	
 </script>
 
