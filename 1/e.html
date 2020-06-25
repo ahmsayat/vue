@@ -10,7 +10,6 @@ $(document).ready(function(){
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 $.each(ticks, function(index,title){	
 	$('#app').append("<img src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=" + title + "&amp;time=1dy&amp;freq=5mi&amp;size=1' />" );
-	$('#app').append("<div class='tradingview-widget-container'><script>{ 'symbol': '" + ticker + "', 'width':150, 'colorTheme': 'dark', 'isTransparent': false, 'locale': 'en'} </script></div>");
 	}
     );
 });
@@ -25,6 +24,6 @@ function tv(ticker)
 
 </head>
 <body id="app">
-
+<div class='tradingview-widget-container'><script>{ 'symbol': 'UAL', 'width':150, 'colorTheme': 'dark', 'isTransparent': false, 'locale': 'en'} </script></div>
 </body>
 </html>
