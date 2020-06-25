@@ -9,7 +9,7 @@ $(document).ready(function(){
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 
 $.each(ticks, function(index,title){
-		$('#app').append("<div onload="x(this)" class='tradingview-widget-container'><div id=" + title + "></div></div>")			
+		$('#app').append("<div onload='x(this)' class='tradingview-widget-container'><div id=" + title + "></div></div>");			
 		}
 	);
   
