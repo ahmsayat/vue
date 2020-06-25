@@ -2,21 +2,68 @@
 <html>
 <head>
 <meta http-equiv="refresh" content="60" />
+
+<style>
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+</style>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 <script tpye="text/javascript">
+
 $(document).ready(function(){ 
 var ticks = ['AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'F', 'M', 'GE', 'GM', 'BA', 'BAC', 'T'];
 var html = '<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>\{ "symbol": "UAL", "width":150, "colorTheme": "light", "isTransparent": false, "locale": "en"\}<\/script>';
 
 $.each(ticks, function(index,title){
-	var graph = "<figure><img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' ><figcaption>UAL</figcaption></figure>";
+	var graph = "<div class='container'><img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' /><div class='centered'>UAL</div></div>";
 	$('#app').append( graph.replaceAll("UAL", title) );
 	//$('#app').append(html.replaceAll("UAL", title));
 	}
     );
 });
+
 </script>
 
 </head>
