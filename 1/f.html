@@ -8,8 +8,8 @@ $(document).ready(function(){
 var ticks = ['BA', 'AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'JWN', 'M', 'F', 'GE', 'GM', 'MITT', 'IVR', 'REML', 'SPG', 'BAC', 'T', 'GCI', 'FENY', 'KR', 'HAL', 'MFA'];
 
 $.each(ticks, function(index,title){
-	var graph = "<img title='UAL' alt='UAL' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' />";
-	$('#app').append( graph.replaceAll("UAL", title) );
+	var graph = "<img title='UAL' alt='{0}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=UAL&amp;time=1dy&amp;freq=1mi&amp;size=1' />";
+	$('#app').append( $.validator.format(graph,[title]) );
 	}
     );
 });
