@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<script src="jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+var ticks = ['FTI', 'RCL'];
+
+$.each(ticks, function(index,title){
+	var graph = `<a href='https://finance.yahoo.com/quote/${title}'><img onclick='alert("${title}")' title='${title}' alt='${title}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=${title}&amp;time=1dy&amp;freq=5mi&amp;size=1' /></a>`;
+	$('#app').append( graph );
+	}
+    );
+});
+
+</script>
+
+		
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="refresh" content="60" />
+
+</head>
+<body id="app">
+[5min] FTI --negative-corr--> RCL
+</body>
+</html>
