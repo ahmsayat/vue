@@ -8,7 +8,7 @@ $(document).ready(function(){
 var ticks = ['BA', 'AAL', 'DAL', 'UAL', 'LUV', 'CCL', 'RCL', 'GPS', 'JWN', 'M', 'F', 'GE', 'GM', 'MITT', 'IVR', 'REML', 'SPG', 'BAC', 'T', 'GCI', 'FENY', 'KR', 'HAL', 'MFA'];
 
 $.each(ticks, function(index,title){
-	var graph = `<a href='https://finance.yahoo.com/quote/${title}'> <figure> <img onclick='alert("${title}")' title='${title}' alt='${title}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=${title}&amp;time=1dy&amp;freq=1mi&amp;size=1' /> <figcaption style='display: inline;'
+	var graph = `<a href='https://finance.yahoo.com/quote/${title}'> <figure> <img onclick='alert("${title}")' title='${title}' alt='${title}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=${title}&amp;time=1dy&amp;freq=1mi&amp;size=1' /> <figcaption style='display: inline-block;'
 > ${title} </figcaption>
  </figure></a>`;
 	$('#app').append( graph );
