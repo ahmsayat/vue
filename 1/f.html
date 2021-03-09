@@ -9,7 +9,7 @@ var ticks = ['FB', 'MSFT', 'AAPL', 'AI', 'TSLA', 'AMZN', 'BA', 'AAL', 'DAL', 'UA
 var myticks = ['MITT', 'IVR', 'REML', 'SPG', 'FENY', 'UAL', 'BA', 'AAL', 'DAL', 'GCI', 'KR', 'HAL'];
 
 $.each(ticks, function(index,title){
-	var graph = `<div style='position:relative; text-align: center; display: inline-block;'><img onclick='alert("${title}")' title='${title}' alt='${title}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=${title}&amp;time=1dy&amp;freq=1mi&amp;size=1' />
+	var graph = `<div style='position:relative; text-align: center; display: inline-block;'><img onclick='alert("${title}")' title='${title}' alt='${title}' src='https://realtimebigchart.factsetdigitalsolutions.com/custom/fidelity-com/fidelity-research3-clone.gifquote?symb=${title}&amp;time=1dy&amp;freq=1mi&amp;size=2' />
 <span style='position: absolute;  top: 50%;left: 30%;'>${title}</span></div>`;
 
 	$('#app').append( graph );
@@ -23,7 +23,7 @@ $.each(ticks, function(index,title){
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<meta http-equiv="refresh" content="60" />
+<meta http-equiv="refresh" content="30" />
 
 </head>
 <body id="app">
